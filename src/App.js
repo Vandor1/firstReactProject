@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Home from "./pages/Home/home";
+import Header from "./components/Header/header";
+import Logo from "./components/Logo/Logo";
+import Card from "./components/Card/Card";
 
-function App() {
+
+export default function App() {
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>welcome to my blog</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Header/>
+        <Home/>
     </div>
+
   );
 }
 
-export default App;
+
+{/*Resources:
+https://www.kirupa.com/react/building_your_first_react_app.htm
+https://getbootstrap.com/ -> CSS/HTML
+https://reactrouter.com/web/api/NavLink -> React
+*/}
