@@ -1,0 +1,11 @@
+.about-wrapper{
+    display:flex;
+    flex-direction: column;
+    align-self: center;
+    width: 60%;
+    margin: 30px;
+}
+
+.about-wrapper h1{
+    color:black;
+}
