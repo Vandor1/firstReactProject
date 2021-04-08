@@ -7,6 +7,7 @@
 div.header-wrapper h2, h1{  /*Specify the h1 and h2 in the header, not global.*/
     color: white;
     font-family: "Cambria Math", serif; /* NOT FINAL */
+    background: rgba(0, 0, 0, 1);
 }
 
 .right-header{

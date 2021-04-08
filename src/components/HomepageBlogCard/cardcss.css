@@ -2,13 +2,17 @@ div.blogCard h6{
     font-weight: lighter;
 }
 
+div.blogCard h2{
+    border-bottom: 1px solid grey; /*TODO: nice or not nice?*/
+}
+
 .blogCard{
     margin-top: 30px;
     display:flex;
     justify-content: space-between;
     border: 1px solid black;
     max-width: 740px;
-    max-height: 300px;
+    max-height: 430px;
     padding: 10px;
 }
 

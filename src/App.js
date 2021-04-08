@@ -14,26 +14,26 @@ import NewBlogPost from "./pages/NewBlogPost/NewBlogPost";
 import Contact from "./pages/Contact/Contact";
 import About from "./pages/About/About";
 import Home from "./pages/Home/home";
-// import blogpostPage from "./components/blogpostPage/blogpostPage";
+import BlogpostPage from "./pages/blogpostPage/BlogpostPage";
 
 
 export default function App() {
-  return (
-      <Router>
-          <div className="App">
-              <Header/>
-              <Switch>
-                  <Route path="/about"> <About /> </Route>
-                  <Route path={"/newPost"}> <NewBlogPost /> </Route>
-                  <Route path="/contact"> <Contact /> </Route>
-                  {/*<Route path={"/post/:id"} component={blogpostPage()}/>*/}
-                  <Route path="/"> <Home /> </Route>
-              </Switch>
 
-              <Footer/>
-          </div>
-      </Router>
-  );
+    return (
+        <Router>
+            <div className="App">
+                <Header/>
+                <Switch>
+                    <Route path="/about"> <About/> </Route>
+                    <Route path={"/newPost"}> <NewBlogPost/> </Route>
+                    <Route path="/contact"> <Contact/> </Route>
+                    <Route path={"/post/:id"} component={BlogpostPage}/>
+                    <Route path="/"> <Home/></Route>
+                </Switch>
+                <Footer/>
+            </div>
+        </Router>
+    );
 }
 
 

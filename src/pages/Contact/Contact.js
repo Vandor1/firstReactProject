@@ -23,7 +23,7 @@ export default function contact() {
                        placeholder="ex: name@example.com"/>
             </div>
             <div className="mb-3">
-                <label htmlFor="exampleFormControlTextarea1" className="form-label">Example textarea</label>
+                <label htmlFor="exampleFormControlTextarea1" className="form-label">Question</label>
                 <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="ex: Hello, I would like to know your github account!"/>
             </div>
             <div className="col-12">
