@@ -1,21 +1,15 @@
 /*REACT*/
-import React, {useEffect, useState} from 'react';
-import {Link, NavLink, useLocation, useParams} from "react-router-dom";
+import React, {useState} from 'react';
+import {Link, NavLink} from "react-router-dom";
 /*CSS*/
 import "./headercss.css";
 /*Pictures*/
 import searchPicture from "./../../img/search.jpg"
-import logo from "../../img/NTNU.jpg";
-import contactPhoto from "./../../img/contactPhoto.jpg";
-import aboutPhoto from "./../../img/aboutMePhoto.jpg";
-import newPostPhoto from "./../../img/create.png";
 /**/
 import {blogPostList} from "../../blogPostsList";
 
-export default function Header() {
+export default function Header({headerTitle,headerSubtitle,img}) {
     const [search, setSearch] = useState(''); /*TODO: searches*/
-    const [photo, setPhoto] = useState(logo);
-    const location = useLocation();
 
     function submitSearch() {
         console.log(this);
@@ -25,42 +19,11 @@ export default function Header() {
         }
     }
 
-    /*TODO: split navbar / header */
-    useEffect(() => {
-        var x = document.getElementById("header-h1");
-        var y = document.getElementById("header-h2");
-
-        switch(location.pathname){
-            case "/contact":
-                x.innerHTML = "Contact Me";
-                y.innerHTML = "For the record: this does not work";
-                setPhoto(contactPhoto);
-                break;
-            case "/about":
-                x.innerHTML = "About Me";
-                y.innerHTML = "I am a Lorem ipsum dolor sit amet";
-                setPhoto(aboutPhoto);
-                break;
-            case "/newPost":
-                x.innerHTML = "New Blog Post";
-                y.innerHTML = "Create a new code related blogpost using the following form.";
-                setPhoto(newPostPhoto);
-                break;
-            case "/":
-                x.innerHTML = "Welcome to my coding blog";
-                y.innerHTML = "I'm a self-proclaimed Lorem Ipsum";
-                setPhoto(logo);
-                break;
-            default:
-                break;
-        }
-    }, [location]);
-
 
     return (
         <div className={"header-wrapper"} >
 
-            <img src={photo} className={"logoImage"}/>
+            <img src={img} className={"logoImage"}/>
 
             <header className={"header"}>
                 <div className={"left-header"}>
@@ -85,8 +48,8 @@ export default function Header() {
             </header>
 
             <div className={"cardTitle"}>
-                <h1 id="header-h1">My name is jeff</h1>
-                <h2 id="header-h2">And im a code monkey</h2>
+                <h1 id="header-h1">{headerTitle}</h1>
+                <h2 id="header-h2">{headerSubtitle}</h2>
             </div>
         </div>
     )

@@ -3,6 +3,7 @@ import './blogpostPage.css';
 import {useParams} from "react-router-dom";
 import {blogPostList} from "../../blogPostsList";
 import BlogPostPageCard from "../../components/blogPostPageCard/BlogPostPageCard";
+import Header from "../../components/Header/header";
 
 export default function BlogpostPage(){
    const [product, setProduct] = useState({});
@@ -18,6 +19,7 @@ export default function BlogpostPage(){
 
     return(
         <div>
+            <Header img={product.image} headerSubtitle={product.subheading} headerTitle={product.title}/>
             <BlogPostPageCard
                 title={product.title}
                 date={product.date}

@@ -4,10 +4,13 @@ import './homecss.css';
 import newpost from './../../img/pluscircle.jpg';
 import {blogPostList} from "../../blogPostsList";
 import Card from "../../components/HomepageBlogCard/Card";
-
+import Header from "../../components/Header/header";
+import photo from "./../../img/NTNU.jpg";
 
 function Home() {
     return (
+        <>
+        <Header img={photo} headerSubtitle={"React is cool"} headerTitle={"Welcome to my code blog"}/>
         <div className={"home-wrapper"}>
             <Link to={"/newPost"}>
                 <img src={newpost} className={"newPost"} alt={"New blog post"}/>
@@ -25,6 +28,7 @@ function Home() {
                         />);
                     }
                 })}</div>
+        </>
     );
 }
 
