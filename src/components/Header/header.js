@@ -17,8 +17,6 @@ export default function Header() {
     const [photo, setPhoto] = useState(logo);
     const location = useLocation();
 
-    const path = location.pathname.slice(1);
-
     function submitSearch() {
         console.log(this);
         if(blogPostList.find(thing => thing.title.includes(search))){
@@ -50,7 +48,7 @@ export default function Header() {
                 break;
             case "/":
                 x.innerHTML = "Welcome to my coding blog";
-                y.innerHTML = "I'm a self-proclaimed code-monkey";
+                y.innerHTML = "I'm a self-proclaimed Lorem Ipsum";
                 setPhoto(logo);
                 break;
             default:
